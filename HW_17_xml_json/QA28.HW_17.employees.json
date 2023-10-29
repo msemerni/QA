@@ -1,0 +1,72 @@
+{
+  "employees": [
+    {
+      "id": 1,
+      "name": "Misha",
+      "address": {
+        "city": "Kharkiv",
+        "street": "Svitla",
+        "house": 15,
+        "flat": 250
+      },
+      "contacts": {
+        "phones": [
+          "+3806612345678"
+        ],
+        "email": "misha@gmail.com",
+        "skype": "misha.skype"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Ira",
+      "address": {
+        "city": "Kharkiv",
+        "street": "Zelena",
+        "house": 7,
+        "flat": 12
+      },
+      "contacts": {
+        "phones": [
+          "+3806623456788"
+        ],
+        "email": "ira@gmail.com",
+        "skype": "ira.skype"
+      }
+    },
+    {
+      "id": 3,
+      "name": "Nadya",
+      "address": {
+        "city": "Kyiv",
+        "street": "Sonyachna",
+        "house": 245,
+        "flat": 87
+      },
+      "contacts": {
+        "phones": [
+          "+380663456789"
+        ],
+        "email": "nadya@gmail.com",
+        "skype": "nadya.skype"
+      }
+    },
+    {
+      "id": 4,
+      "name": "Valera",
+      "address": {
+        "city": "Odessa",
+        "street": "Beregovaya",
+        "house": 35,
+        "flat": 158
+      },
+      "contacts": {
+        "phones": [
+          "+380664567890"
+        ],
+        "email": "valera@gmail.com",
+        "skype": "valera.skype"
+      }
+    }
+  ]
+}

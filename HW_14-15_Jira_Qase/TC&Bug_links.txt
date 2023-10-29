@@ -1,0 +1,2 @@
+https://msemerni.atlassian.net/jira/software/projects/QH14/boards/3
+https://app.qase.io/project/TC?previewMode=side&suite=1

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite>
+	<id>S3</id>
+	<name>Rozetka</name>
+	<description>Функція реєстрації має деякі зміни на веб-застосунку https://rozetka.com.ua/. Розробник з вашої команди зазначив, що це може вплинути на логін, функції відновлення пароля і потенційно пов’язані модулі.
+Напишіть мінімум 5, максимум 10 тест-кейсів для регресійного тестування з поясненням чому саме ці секції ви обрали для тестування. Протестуйте веб-застосунок використовуючи ваші тест-кейси і оформіть баги у баг-репорти (якщо знайдете).</description>
+	<sections>
+		<section>
+		<name>Test Cases</name>
+		<description></description>
+						<cases>
+												<case>
+				<id>C3</id>
+				<title>Registration</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>High</priority>
+																				<estimate>900</estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Site https://rozetka.com.ua/ua/ opened in the browser
+Valid input data is available
+
+</preconds>
+										<steps_separated><step>
+<index>1</index><content>Click the avatar icon at the right-top corner of the window</content><expected>Modal window &quot;Вхiд&quot; appear</expected></step>
+<step>
+<index>2</index><content>Click &quot;Зареєструватися&quot; text at the bottom of the modal window</content><expected>Modal window &quot;Реєстрація&quot; appear
+</expected></step>
+<step>
+<index>3</index><content>Fill fields &quot;Ім&apos;я&quot;, &quot;Прізвище&quot;, &quot;Номер телефону&quot;, &quot;Ел. пошта&quot;, &quot;Придумайте пароль&quot; with valid data</content><expected>The entered data appeared in the appropriate fields</expected></step>
+<step>
+<index>4</index><content>Click &quot;Зареєструватися&quot; button at the bottom of the modal window</content><expected>Modal window &quot;Реєстрація&quot; with &quot;Phone number confirmation&quot; appear;
+Verification code sent to the phone specified during registration</expected></step>
+<step>
+<index>5</index><content>Enter the code sent to the phone specified during registration in the &quot;Код підтвердження&quot; field and click &quot;Підтвердити&quot; button
+
+</content><expected>The user is authorized in the application. The homepage of the application has opened</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C4</id>
+				<title>Login with phone number</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>High</priority>
+																				<estimate>900</estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Site https://rozetka.com.ua/ua/ opened in the browser
+User not loginned
+Valid phone number is available
+</preconds>
+										<steps_separated><step>
+<index>1</index><content>Click the avatar icon at the right-top corner of the window</content><expected>Modal window &quot;Вхiд&quot; appear</expected></step>
+<step>
+<index>2</index><content>Fill fields &quot;Ел. пошта або телефон&quot; and &quot;Пароль&quot; with registered phone number and valid password accordingly
+</content><expected>The entered data appeared in the appropriate fields</expected></step>
+<step>
+<index>3</index><content>Click &quot; Увійти&quot; button at the bottom of the modal window</content><expected>The user is authorized in the application. The homepage of the application has opened</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C5</id>
+				<title>Login with email</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>High</priority>
+																				<estimate>900</estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Site https://rozetka.com.ua/ua/ opened in the browser
+User not loginned
+Valid email is available
+</preconds>
+										<steps_separated><step>
+<index>1</index><content>Click the avatar icon at the right-top corner of the window</content><expected>Modal window &quot;Вхiд&quot; appear</expected></step>
+<step>
+<index>2</index><content>Fill fields &quot;Ел. пошта або телефон&quot; and &quot;Пароль&quot; with registered email and valid password accordingly
+</content><expected>The entered data appeared in the appropriate fields</expected></step>
+<step>
+<index>3</index><content>Click &quot; Увійти&quot; button at the bottom of the modal window</content><expected>The user is authorized in the application. The homepage of the application has opened</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C6</id>
+				<title>Login with Google account</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>High</priority>
+																				<estimate>900</estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Site https://rozetka.com.ua/ua/ opened in the browser
+User not loginned
+User has valid Google account</preconds>
+										<steps_separated><step>
+<index>1</index><content>Click the avatar icon at the right-top corner of the window</content><expected>Modal window &quot;Вхiд&quot; appear</expected></step>
+<step>
+<index>2</index><content>Click &quot;Google&quot; button at the &quot;Увійти як користувач&quot; section
+</content><expected>Modal window of Google accounts appear</expected></step>
+<step>
+<index>3</index><content>Click valid Google account</content><expected>The user is authorized in the application. The homepage of the application has opened</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C7</id>
+				<title>Login with Facebook account</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>High</priority>
+																				<estimate>900</estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Site https://rozetka.com.ua/ua/ opened in the browser
+User not loginned
+User has valid Facebook account</preconds>
+										<steps_separated><step>
+<index>1</index><content>Click the avatar icon at the right-top corner of the window</content><expected>Modal window &quot;Вхiд&quot; appear</expected></step>
+<step>
+<index>2</index><content>Click &quot;Facebook&quot; button at the &quot;Увійти як користувач&quot; section
+</content><expected>Modal window of Facebook login appear</expected></step>
+<step>
+<index>3</index><content>Fill &quot;Email or Phone number&quot; and &quot;Password&quot; with valid data of Facebook account</content><expected>The user is authorized in the application. The homepage of the application has opened</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C9</id>
+				<title>Password recovery by email</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>High</priority>
+																				<estimate>900</estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Site https://rozetka.com.ua/ua/ opened in the browser
+User not loginned
+User registered at https://rozetka.com.ua before
+Valid input data is available
+</preconds>
+										<steps_separated><step>
+<index>1</index><content>Click the avatar icon at the right-top corner of the window</content><expected>Modal window &quot;Вхiд&quot; appear</expected></step>
+<step>
+<index>2</index><content>Fill field &quot;Ел. пошта або телефон&quot; with registered email
+</content><expected>The entered data appeared in the appropriate field</expected></step>
+<step>
+<index>3</index><content>Click &quot;Нагадати пароль&quot; text under the password field</content><expected>Modal window &quot;Вхiд&quot; with email and &quot;Отримати тимчасовий пароль&quot; button appear</expected></step>
+<step>
+<index>4</index><content>Click &quot;Отримати тимчасовий пароль&quot; button</content><expected>Tooltip with text &quot;На вказану адресу ел. пошти надіслано тимчасовий пароль, введіть його&quot; for Email field appear;
+Temporary password sent to email</expected></step>
+<step>
+<index>5</index><content>Enter temporary password from email to the &quot;Тимчасовий пароль&quot; field of the current modal window and click &quot;Увiйти&quot; button</content><expected>The user is authorized in the application. The homepage of the application has opened</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+								</cases>
+							</section>
+	</sections>
+</suite>

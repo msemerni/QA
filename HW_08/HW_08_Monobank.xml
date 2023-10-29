@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite>
+	<id>S4</id>
+	<name>Monobank</name>
+	<description>Складіть 3 позитивних та 3 негативних тест-кейсів на функціональне тестування програми для мобільного додатку банкінгу (монобанк/приват24).</description>
+	<sections>
+		<section>
+		<name>Test Cases</name>
+		<description></description>
+						<cases>
+												<case>
+				<id>C16</id>
+				<title>The ability for the user to block the card in the app settings</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>High</priority>
+																				<estimate>600</estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Mobile app &quot;monobank&quot; installed and opened on Android OS
+User has &quot;monobank&quot; card account
+User authorized
+
+</preconds>
+										<steps_separated><step>
+<index>1</index><content>Tap the valid card at the right-top corner</content><expected>Cart expands to full screen, section &quot;Налаштування&quot; appear</expected></step>
+<step>
+<index>2</index><content>Tap &quot;Заблокувати карту&quot; at the &quot;Налаштування&quot; section</content><expected>Text &quot;Заблокувати карту&quot; at the &quot;Налаштування&quot; section changed to &quot;Розблокувати карту&quot;;
+Cart image animated: cart number disappear, text &quot;Заблокувати карту&quot; appear</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C17</id>
+				<title>Login with fingerprint</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Mobile app &quot;monobank&quot; installed on Android OS
+User fingerprint added in the application settings before
+
+</preconds>
+										<steps_separated><step>
+<index>1</index><content>Tap the application icon &quot;monobank&quot; at the phone screen</content><expected>Modal window with fingerprint icon at the bottom of the phone screen appear</expected></step>
+<step>
+<index>2</index><content>Place the finger saved in the app earlier on the fingerprint icon</content><expected>The user is authorized in the application.
+The homepage of the application has opened.
+</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C18</id>
+				<title>Transfer to the another card</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Critical</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Mobile app &quot;monobank&quot; installed and opened on Android OS
+User has &quot;monobank&quot; card account with positive balance
+Second valid card number of any bank
+User authorized
+</preconds>
+										<steps_separated><step>
+<index>1</index><content>Tap the &quot;Переказати на карту&quot; on the top part of homepage</content><expected>Window &quot;Переказ на картку&quot; appear</expected></step>
+<step>
+<index>2</index><content>Tap the input field &quot;Уведiть iм&apos;я, номер картки або телефону&quot; and enter valid another(second) cart number</content><expected>&quot;Створити платiж&quot; button appear at the bottom of the phone screen</expected></step>
+<step>
+<index>3</index><content>Tap &quot;Створити платiж&quot; button</content><expected>Window with text &quot;0₴&quot; and &quot;Надiслати&quot; button appear. A virtual keyboard appear</expected></step>
+<step>
+<index>4</index><content>Enter transfer sum (less then cart balance) and tap the &quot;Надiслати&quot; button</content><expected>Money transfered to the another cart</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C19</id>
+				<title>Login with wrong pin code</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Mobile app &quot;monobank&quot; installed on Android OS
+Pin code added in the application settings before
+Valid pin-code is known
+
+
+</preconds>
+										<steps_separated><step>
+<index>1</index><content>Tap the application icon &quot;monobank&quot; at the phone screen</content><expected>Modal window with fingerprint icon and &quot;ВВЕСТИ ПIН-КОД&quot; text at the bottom of the phone screen appear</expected></step>
+<step>
+<index>2</index><content>Tap the &quot;ВВЕСТИ ПIН-КОД&quot; text</content><expected>Window with Num-pad appear</expected></step>
+<step>
+<index>3</index><content>Enter wrong pin code</content><expected>The user is not authorized in the application.
+The homepage of the application has not opened.
+Window with Num-pad displayed</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C20</id>
+				<title>Transfer from card to the another card exceeding card balance</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Mobile app &quot;monobank&quot; installed and opened on Android OS
+User has &quot;monobank&quot; card account
+Second valid card number of any bank is known
+User authorized
+
+</preconds>
+										<steps_separated><step>
+<index>1</index><content>Tap the &quot;Переказати на карту&quot; on the top part of homepage</content><expected>Window &quot;Переказ на картку&quot; appear</expected></step>
+<step>
+<index>2</index><content>Tap the input field &quot;Уведiть iм&apos;я, номер картки або телефону&quot; and enter valid another(second) card number</content><expected>&quot;Створити платiж&quot; button appear at the bottom of the phone screen</expected></step>
+<step>
+<index>3</index><content>Tap &quot;Створити платiж&quot; button</content><expected>Window with text &quot;0₴ and &quot;Надiслати&quot; button appear. A virtual keyboard appear</expected></step>
+<step>
+<index>4</index><content>Enter transfer sum (less then cart balance) and tap the &quot;Надiслати&quot; button</content><expected>Money not transfered to the another card
+The &quot;Надiслати&quot; button disabled
+Text &quot;Недостатньо коштiв на картцi&quot; appear at the top of the screen</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C21</id>
+				<title>Increase credit limit &gt;100.000₴</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Mobile app &quot;monobank&quot; installed and opened on Android OS
+User has &quot;monobank&quot; card account
+User authorized
+</preconds>
+										<steps_separated><step>
+<index>1</index><content>Tap the valid card at the right-top corner</content><expected>Card expands to full screen, section &quot;Налаштування&quot; appear</expected></step>
+<step>
+<index>2</index><content>Tap &quot;Налаштування лiмiтiв&quot; at the &quot;Налаштування&quot; section</content><expected>Window &quot;Налаштування лiмiтiв&quot; appear</expected></step>
+<step>
+<index>3</index><content>Tap &quot;Пiдвищити лiмiт на картку&quot;</content><expected>Window &quot;Пiдвищити лiмiт на картку&quot; with text &quot;0₴&quot; and &quot;Далi&quot; button appear. A virtual keyboard appear</expected></step>
+<step>
+<index>4</index><content>Enter number &amp;amp;gt; 100000 </content><expected>Limit not exceeded
+The &quot;Далi&quot; button disabled
+</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+								</cases>
+							</section>
+	</sections>
+</suite>
